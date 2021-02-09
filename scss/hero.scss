@@ -1,0 +1,130 @@
+@import "config";
+.hero {
+    height:calc(100vh - 70px);
+   .slides {
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+    max-width: 100%;
+    margin: 0 auto 0;
+    
+    .slide {
+      position: absolute;
+      top: 19%;
+      left: 10%;     
+      opacity: 0;
+      transition: all 0.3s ease-in-out;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      //grid-template-areas: 'img txt'; 
+      width:90%;
+      .slide-image {
+        margin-top:-2rem;
+          img {
+           width: 90%;
+           
+        }
+      }
+      .slide-text {
+        text-align: left;
+        width:80%;
+        h6 {
+          color: #2e2e2e;
+          font-weight: 100;
+          text-transform: uppercase;
+          padding: 0px 0px 1rem 0px;
+          font-size:1rem;
+
+        }
+        h2 {
+          color: $primary-color;
+          font-weight: 300;
+          font-size: 2rem;
+          margin-bottom: 10px;
+        }
+        p {
+          color: $para-font-color;
+          font-weight: 100;
+          margin-bottom: 10px;
+          font-size: 1.3rem;
+        }
+        a {
+          padding: 8px 15px;
+          display: inline-block;
+          border-radius: $border-radius;
+          text-transform: uppercase;
+        }
+        .explore-link {
+          font-size: 16px;
+          text-transform: none;
+          padding: 8px 0px;
+          color: $anchor-color;
+        }
+      }
+    }
+    .slide.activeSlide {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .slide.lastSlide {
+      transform: translateX(-100%);
+    }
+    .slide.nextSlide {
+      transform: translateX(100%);
+    }
+  }
+
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: $primary-color;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+}
+@media (max-width:700px){
+    .hero{
+        .slides{
+            .slide{
+                grid-template-columns: 1fr;
+                top:1%;
+                left:0;
+                
+                width:100%;
+                .slide-image {
+                    margin-top:0rem;
+                    padding-left:1rem;
+                    
+                }
+                .slide-text {
+                    text-align:center;
+                    width:100%;
+                    padding:0 10px;
+                    h6{
+                        font-size:0.8rem;
+                        margin:1rem 0 0 ;
+                    }
+                    h2{
+                        font-size:1.3rem;
+                        padding:0 10px
+                    }
+                    p{
+                        font-size:1rem;
+                    }
+                }
+            }
+        }
+    }
+}

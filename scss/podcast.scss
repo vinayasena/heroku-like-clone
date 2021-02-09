@@ -1,0 +1,84 @@
+@import 'config';
+
+.podcast {
+    background-color: #f7f3fb;
+    padding: 3rem 0;
+  
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      width: 95%;
+      margin: 0 auto;
+      .podcast {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        .mike {
+          margin-right: 2rem;
+          img {
+            width: 100px;
+          }
+        }
+        .codish {
+          padding-right: 3rem;
+          h2 {
+            font-weight: 200;
+            color: $primary-color;
+            margin-bottom: 1rem;
+            font-size: 1.6rem;
+          }
+        }
+      }
+      .sample {
+        background-color: #fff;
+        padding: 20px 15px;
+        border-radius: $border-radius;
+        .header_pod {
+          display: flex;
+          justify-content: flex-start;
+          text-transform: uppercase;
+          font-size: 16px;
+          margin-bottom: 1rem;
+          .badge {
+            background-color: green;
+            color: #fff;
+  
+            border-radius: $border-radius;
+            margin-right: 15px;
+            span {
+              padding: 3px 8px;
+            }
+          }
+          .date {
+            margin-left: 20px;
+          }
+        }
+  
+        //sample
+        .pod-title {
+          margin-bottom: 2rem;
+          font-size: 1.8rem;
+          color: $primary-color;
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 700px) {
+    .podcast {
+      .container {
+        display: grid;
+        grid-template-columns: 1fr;
+  
+        .podcast {
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          .codish {
+            padding: 0;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }

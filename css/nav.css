@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.btn {
+  border: none;
+  border-radius: px;
+  padding: 6px 12px;
+  background-color: #79589F;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: #1969ca;
+}
+
+h2 {
+  line-height: 1.2;
+  font-size: 30px;
+}
+
+h6 {
+  letter-spacing: 1.5px;
+  margin: 0 0 0.5rem 0;
+}
+
+ul {
+  list-style: none;
+}
+
+input {
+  height: 143px;
+  height: 33px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 0 5px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: #3F3F44;
+  line-height: 1.4;
+  height: 100%;
+}
+
+.spacer-top {
+  padding-top: 30px;
+}
+
+.header {
+  padding: 10px 20px;
+  height: 70px;
+}
+
+.header .main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .main-nav .logo-image {
+  width: 150px;
+}
+
+.header .main-nav ul {
+  display: flex;
+  flex: 1;
+  margin-left: 20px;
+  font-size: 15px;
+}
+
+.header .main-nav ul li {
+  margin-right: 10px;
+}
+
+.header .main-nav ul li a {
+  color: #323839;
+  border-bottom: 1px solid #79589F;
+}
+
+.header .main-nav .search {
+  margin-right: 0px;
+}
+
+.header .main-nav .login a {
+  font-size: 13px;
+  padding: 0 10px;
+}
+
+.header .main-nav .login span {
+  padding: 0 5px;
+}
+
+.header .main-nav .login button {
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.header .main-nav .mobile-menu-wrapper {
+  display: none;
+}
+
+.header .main-nav .mobile-menu-wrapper .mobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+}
+
+.header .main-nav .mobile-menu-wrapper .mobile div {
+  margin: 4px 0px;
+  border: 1px solid #79589F;
+}
+
+.header .main-nav .mobile-menu-wrapper .mobile .line1 {
+  width: 100%;
+}
+
+.header .main-nav .mobile-menu-wrapper .mobile .line2 {
+  width: 70%;
+}
+
+.header .main-nav .mobile-menu-wrapper .mobile .line3 {
+  width: 100%;
+}
+
+@media (max-width: 800px) {
+  .header .main-nav .mobile-menu-wrapper {
+    display: block;
+  }
+  .header .main-nav ul, .header .main-nav .search, .header .main-nav .login {
+    display: none;
+  }
+}
+
+.sidebar-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  visibility: visible;
+  z-index: -999;
+  transform: scale(0);
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.sidebar-wrapper .sidebar {
+  width: 90vw;
+  height: 95vh;
+  position: relative;
+  padding: 4rem 2rem;
+}
+
+.sidebar-wrapper .sidebar .close-btn {
+  font-size: 2rem;
+  background: transparent;
+  border-color: transparent;
+  color: #fff;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+.sidebar-wrapper .sidebar .sidebar-links {
+  color: #fff;
+}
+
+.sidebar-wrapper .sidebar .sidebar-links h2 {
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.sidebar-wrapper .sidebar .sidebar-links ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sidebar-wrapper .sidebar .sidebar-links ul li {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+}
+
+.sidebar-wrapper .sidebar .sidebar-links ul li a {
+  color: #fff;
+  font-size: 18px;
+}
+
+.sidebar-wrapper .sidebar .sidebar-links img {
+  width: 30px;
+  margin-right: 20px;
+}
+
+.sidebar-wrapper.show {
+  visibility: visible;
+  z-index: 2;
+  transform: scale(1);
+}
+
+.footer-2 {
+  padding: 30px 10px;
+  background-color: #f0f0f0;
+}
+
+.footer-2 ul {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-2 ul li {
+  margin-right: 20px;
+}
+
+.footer-2 ul li a {
+  text-decoration: underline;
+  color: #596981;
+}
+
+.footer-2 p {
+  text-align: center;
+  padding-top: 20px;
+}
+/*# sourceMappingURL=nav.css.map */
